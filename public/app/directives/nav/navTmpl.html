@@ -1,0 +1,15 @@
+<div class="nav">
+  <div class="logo">
+    <a href="/home">Home</a>
+    <a href="/blog">Blog</a>
+    <a ng-show="user" ui-sref="userProfile">
+      {{user.name_first}}
+      <span ng-show="user.name_last">
+        {{user.name_last}}
+      </span>
+    </a>
+    <a ng-hide="user" href="/auth">Login</a>
+    <a class="button" ng-hide="user" href="/auth">SIGN UP</a>
+    <a ng-show="user" ng-click="logout()">logout</a>
+  </div>
+</div>
